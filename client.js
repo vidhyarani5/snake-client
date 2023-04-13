@@ -7,15 +7,15 @@ const connect = function () {
   });
 
   conn.setEncoding("utf8");
-  
-  conn.on("data", (data) => {
-    console.log("Server says: ", data);
-  });
 
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
     conn.write("Name: VIP");
-    setInterval( func = () => { conn.write("Move: up");  }, 500);
+    //setInterval( func = () => { conn.write("Move: up");  }, 500);
+  });
+  
+  conn.on("data", (data) => {
+    console.log("Server says: ", data);
   });
   
   return conn;
