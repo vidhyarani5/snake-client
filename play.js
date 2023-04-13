@@ -5,9 +5,6 @@ console.log("Connecting ...");
 let conn = connect();
 
 conn.on("connect", () => {
-  console.log("Successfully connected to game server");
+  setInterval( func = () => { conn.write("Move: up");  }, 500);
 });
-
-conn.on("connect", () => {
-  conn.write("Name: VIP");
-});
+    
