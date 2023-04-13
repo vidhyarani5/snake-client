@@ -27,6 +27,9 @@ const handleUserInput = (key) => {
   if (key === 'd') {
     connection.write("Move: right");
   }
+  if (key === "h") {
+    connection.write("Say: Hi");
+  }
 
   //press Ctrl + C to exit
   if (key === '\u0003') {
